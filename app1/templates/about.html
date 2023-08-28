@@ -1,0 +1,313 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Page Header Section Start Here -->
+<section class="page-header bg_img padding-tb">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="page-header-content-area">
+			<h4 class="ph-title">Poultry Farm About us</h4>
+			<ul class="lab-ul">
+				<li><a href="/">Home</a></li>
+				<li><a class="active">About</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+<!-- Page Header Section Ending Here -->
+
+<!-- about section start here -->
+<section class="about-section bg_img relative padding-tb">
+	<div class="container">
+		<div class="row align-items-center mb-15">
+			<div class="col-lg-6 col-12">
+				<div class="about-thumb">
+					<img src="{% static 'assets/images/about/image2.webp' %}" alt="about-thumb">
+				</div>
+			</div>
+			<div class="col-lg-6 col-12">
+				<div class="about-wrapper">
+					<div class="about-title">
+						<h2><span class="d-lg-block">Welcome to Our Poultry And </span>Egg Farm.</h2>
+						<p>Continually productize compelling quality for packed with elated Productize compelling
+							quality for packed with all elated themv Setting up to website and creating pages.</p>
+					</div>
+					<div class="about-content">
+						<ul class="lab-ul list-group">
+							<li class="list-group-item py-1 px-0 border-none"><i
+									class="icofont-tick-boxed mr-2 color-theme"></i>We are providing different services
+							</li>
+							<li class="list-group-item py-1 px-0 border-none"><i
+									class="icofont-tick-boxed mr-2 color-theme"></i>We are one of leading company</li>
+							<li class="list-group-item py-1 px-0 border-none"><i
+									class="icofont-tick-boxed mr-2 color-theme"></i>Profitability is the primary goal of
+								all business</li>
+							<li class="list-group-item py-1 px-0 border-none"><i
+									class="icofont-tick-boxed mr-2 color-theme"></i>Learn how to grow your Business
+							</li>
+							<li class="list-group-item py-1 px-0 border-none"><i
+									class="icofont-tick-boxed mr-2 color-theme"></i>Professional solutions for your
+								business</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- about section ending here -->
+
+<!-- Feature section start here -->
+<section class="feature-section">
+	<div class="container">
+		<div class="row text-center justify-content-center">
+			{% for n in featureData %}
+			<div class="col-lg-3 col-sm-6 col-12">
+				<div class="lab-item">
+					<div class="lab-inner">
+						<div class="lab-thumb">
+							<img src="{{n.feature_icon}}" alt="Feature Image">
+						</div>
+						<div class="lab-content">
+							<h6>{{n.feature_title}}</h6>
+							<p>{{n.feature_des}} </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<!-- Feature section ending here -->
+
+<!--History section start here -->
+<section class="history-section padding-tb">
+	<div class="container">
+		<div class="history-header section-header text-left">
+			<h2>History</h2>
+			<h2>11 Years Farm Traditions</h2>
+		</div>
+		<div class="history-content">
+			<div class="row mb-15">
+				<div class="col-xl-8 col-12">
+					<div class="history-items">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="lab-item">
+									<div class="lab-inner">
+										<div class="lab-thumb">
+											<img src="{% static 'assets/images/about/history/01.jpg' %}"
+												alt="history-img">
+										</div>
+										<div class="lab-content">
+											<div class="history-left">
+												<h2 class="mb-0">Since</h2>
+												<h2 class="mb-lg-0"><span>2012</span></h2>
+											</div>
+											<div class="history-right">
+												<p class="mb-0">Raghav Group of Farms is a pioneering company that
+													specializes in the fascinating process of egg hatching. With a
+													commitment to delivering the finest quality white eggs directly to
+													your doorstep, we have revolutionized the way we access farm-fresh
+													products. What sets us apart is their ability to transport these
+													delicate eggs over long distances, spanning up to 1000 kilometers,
+													ensuring that customers far and wide can enjoy their exceptional
+													produce.
+												</p>
+												<p class="mb-0">At our state-of-the-art facilities, Raghav Group of
+													Farms ensures a meticulous and controlled environment for egg
+													hatching. Our team of experienced professionals follows strict
+													protocols to ensure the best possible conditions for the eggs to
+													develop and hatch. From carefully monitoring temperature and
+													humidity levels to implementing advanced hatching techniques.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="lab-item">
+									<div class="lab-inner">
+										<div class="lab-thumb">
+											<img src="{% static 'assets/images/about/history/01.jpg' %}"
+												alt="history-img">
+										</div>
+										<div class="lab-content">
+											<div class="history-left">
+												<h2 class="mb-0">Since</h2>
+												<h2 class="mb-lg-0"><span>2012</span></h2>
+											</div>
+											<div class="history-right">
+												<p class="mb-0">With a focus on customer convenience, we have streamlined our ordering and delivery process. Customers can easily place their orders online or over the phone and we will ensure prompt and reliable delivery right to their doorstep. This seamless experience allows customers to enjoy the benefits of farm-fresh eggs without any hassle.
+												</p>
+												<p class="mb-0">In conclusion, we have redefined the egg industry with our commitment to quality, innovation and customer satisfaction. By specializing in egg hatching, we have mastered the delicate art of producing white eggs of the highest caliber.
+												</p>
+												<p class="mb-0">With our ability to transport eggs over long distances, we have made farm-fresh eggs accessible to customers even hundreds of kilometers away. We are happy to be providing a delightful culinary experience for egg lovers across the country.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-12">
+					<div class="achievement text-center mt-lg-0">
+						<div class="achievement-title">
+							<h3>Our Achievement</h3>
+						</div>
+						<div class="achievement-content">
+							<div class="row justify-content-center">
+
+								<!-- {% for n in achievementData %}
+										<div class="col-xl-6 col-lg-3 col-md-3 col-6">
+											<div class="lab-item">
+												<div class="lab-inner text-center">
+													<div class="lab-thumb mb-3">
+														<img src="{{n.achievement_icon}}"
+															alt="">
+													</div>
+													<div class="lab-content">
+														<h3><span class="counter">{{n.achievement_des}}</span></h3>
+														<h5>{{n.achievement_title}}</h5>
+													</div>
+												</div>
+											</div>
+										</div>
+										{% endfor %} -->
+
+								<div class="col-xl-6 col-lg-3 col-md-3 col-6">
+									<div class="lab-item">
+										<div class="lab-inner text-center">
+											<div class="lab-thumb mb-3">
+												<img src="{% static 'assets/images/about/history/achievement/01.png' %}"
+													alt="Customer">
+											</div>
+											<div class="lab-content">
+												<h3><span class="counter">6,200</span></h3>
+												<h5>Customers</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-6 col-lg-3 col-md-3 col-6">
+									<div class="lab-item">
+										<div class="lab-inner text-center">
+											<div class="lab-thumb mb-3">
+												<img src="{% static 'assets/images/about/history/achievement/02.png' %}"
+													alt="Customer">
+											</div>
+											<div class="lab-content">
+												<h3><span class="counter">400</span>+</h3>
+												<h5>Award Won</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-6 col-lg-3 col-md-3 col-6">
+									<div class="lab-item">
+										<div class="lab-inner text-center">
+											<div class="lab-thumb mb-3">
+												<img src="{% static 'assets/images/about/history/achievement/03.png' %}"
+													alt="Customer">
+											</div>
+											<div class="lab-content">
+												<h3><span class="counter">50</span>+</h3>
+												<h5>Volunteer</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-6 col-lg-3 col-md-3 col-6">
+									<div class="lab-item">
+										<div class="lab-inner text-center">
+											<div class="lab-thumb mb-3">
+												<img src="{% static 'assets/images/about/history/achievement/04.png' %}"
+													alt="Customer">
+											</div>
+											<div class="lab-content">
+												<h3><span class="counter">40</span>k+</h3>
+												<h5>Poultry</h5>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="history-navigation mt-3">
+							<div class="history-button-prev">
+								<i class="fas fa-arrow-left"></i>
+							</div>
+							<div class="history-button-next">
+								<i class="fas fa-arrow-right"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--History section end here -->
+
+<!-- testimonial Section start here -->
+<section class="testimonial-section padding-tb pt-0">
+	<div class="container">
+		<div class="row mb-15">
+			<div class="col-12">
+				<div class="section-header">
+					<h3>What Client Say Our Poultry Farm</h3>
+					<p>Conveniently customize proactive web services for leveraged interfaces without Globally </p>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="testimonial-content">
+					<div class="row">
+						{% for n in memberData %}
+						<div class="col-lg-4">
+							<div class="lab-item testi-item-2">
+								<div class="lab-inner">
+									<div class="testi-top">
+										<div class="testi-t-thumb">
+											<img src="{{n.member_image}}"
+												alt="author-image">
+										</div>
+										<div class="testi-t-content">
+											<a href="#">
+												<h6>{{n.member_name}}</h6>
+											</a>
+											<p>{{n.member_designation}}</p>
+											<div class="rating">
+												<span><a href="#"><i class="far fa-star"></i></a></span>
+												<span><a href="#"><i class="far fa-star"></i></a></span>
+												<span><a href="#"><i class="far fa-star"></i></a></span>
+												<span><a href="#"><i class="far fa-star"></i></a></span>
+												<span><a href="#"><i class="far fa-star"></i></a></span>
+											</div>
+										</div>
+									</div>
+									<div class="testi-bottom">
+										<p><img class="q1" src="{% static 'assets/images/testimonial/q1.png' %}"
+												alt='"'>
+											{{n.member_des}}
+											<img class="q2" src="{% static 'assets/images/testimonial/q2.png' %}"
+												alt='"'>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- testimonial Section end here -->
+
+{% endblock %}

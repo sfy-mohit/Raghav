@@ -1,0 +1,419 @@
+{% load static %}
+
+<head>
+	<title>Poultry Farm</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- google fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap"
+		rel="stylesheet">
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/images/x-icon/01.png' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/icofont.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/lightcase.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/swiper.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+    <body>
+
+        <!-- preloader start here -->
+        <div class="preloader">
+            <div class="preloader-inner">
+                <div class="preloader-icon">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- preloader ending here -->
+    
+    
+        <!--search area-->
+        <div class="search-input">
+            <div class="search-close">
+                <i class="icofont-close-circled"></i>
+            </div>
+            <form>
+                <input type="text" name="text" placeholder="Search Heare">
+                <button class="search-btn" type="submit">
+                    <i class="icofont-search-2"></i>
+                </button>
+            </form>
+        </div>
+        <!-- search area -->
+    
+        <!-- Mobile Menu Start Here -->
+        <div class="mobile-menu transparent-header">
+            <nav class="mobile-header">
+                <div class="header-logo">
+                    <a href="{% url 'sanjana2' %}"><img src="{% static 'assets/images/logo/sanjanaagro.png' %}" alt="logo"></a>
+                </div>
+                <div class="header-bar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+            <nav class="mobile-menu">
+                <div class="mobile-menu-area">
+                    <div class="mobile-menu-area-inner">
+                        <ul class="lab-ul">
+                            <li class="active">
+                                <a href="#0">Home</a>
+                                <!-- <ul class="lab-ul">
+                                    <li><a href="/">Home Page One</a></li>
+                                    <li><a href="index-2.html">Home Page Two</a></li>
+                                </ul>  -->
+                            </li>
+                            <li> 
+                                <a href="#0">About</a>
+                                <ul class="lab-ul">
+                                    <li><a href="{% url 'about' %}">Raghav</a></li>
+                                    <li><a href="{% url 'sanjana' %}">Sanjana organics</a></li>
+                                    <li><a href="{% url 'sanjana2' %}">Sanjana agrovat</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="{% url 'blog' %}">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#0">Shop</a>
+                                <ul class="lab-ul">
+                                    <li><a href="{% url 'productspage' %}">Products Page</a></li>
+                                    <li><a href="{% url 'productsdetails' %}">Products Details</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Mobile Menu Ending Here -->
+    
+        <!-- desktop menu start here -->
+        <header class="header-section">
+            <div class="header-top">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-lg-5 col-12">
+                            <div class="logo py-2">
+                                <a href="{% url 'sanjana2' %}"><img src="{% static 'assets/images/logo/sanjanaagro.png' %}" alt="logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-12">
+                            <div class="ht-left">
+                                <ul class="lab-ul d-flex flex-wrap justify-content-end">
+                                    <li class="d-flex flex-wrap align-items-center">
+                                        <div class="ht-add-thumb mr-2">
+                                            <img src="{% static 'assets/images/header/01.png' %}" alt="address">
+                                        </div>
+                                        <div class="ht-add-content">
+                                            <span>122/715, Second Floor,
+                                            </span>
+                                        <span class="d-block text-bold">Shastri Nagar</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex flex-wrap align-items-center">
+                                        <div class="ht-add-thumb mr-2">
+                                            <img src="{% static 'assets/images/header/02.png' %}" alt="email">
+                                        </div>
+                                        <div class="ht-add-content">
+                                            <span>Send Mail </span>
+                                            <span class="d-block text-bold"><a href="mailto:info@raghavfarms.com">info@raghavfarms.com</a></span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex flex-wrap align-items-center">
+                                        <div class="ht-add-thumb mr-2">
+                                            <img src="{% static 'assets/images/header/03.png' %}" alt="call">
+                                        </div>
+                                        <div class="ht-add-content">
+                                            <span>Make Call </span>
+                                            <span class="d-block text-bold"><a href="tel:+91-9335663985">+91-9335663985</a></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom bg-theme">
+                <div class="header-area">
+                    <div class="container">
+                        <div class="primary-menu">
+                            <div class="main-area w-100">
+                                <div class="main-menu d-flex flex-wrap align-items-center justify-content-between w-100">
+                                    <div class="logo">
+                                        <a href="{% url 'sanjana2' %}"><img src="{% static 'assets/images/logo/sanjanaagro.png' %}"
+                                                alt="logo"></a>
+                                    </div>
+                                    <ul class="lab-ul">
+                                        <li class="active">
+                                            <a href="/">Home</a>
+                                            <!-- <ul class="lab-ul">
+                                                <li><a href="/" class="active">Home Page One</a></li>
+                                                <li><a href="index-2.html">Home Page Two</a></li>
+                                            </ul> -->
+                                        </li>
+                                        
+                                        <li> 
+                                            <a href="#0">About</a>
+                                            <ul class="lab-ul">
+                                                <li><a href="{% url 'about' %}">Raghav</a></li>
+                                                <li><a href="{% url 'sanjana' %}">Sanjana organics</a></li>
+                                                <li><a href="{% url 'sanjana2' %}">Sanjana agrovate</a></li>
+                                            </ul>
+                                        </li>
+
+
+                                        <li>
+                                            <a href="{% url 'blog' %}">Blog</a>
+                                            
+                                        </li>
+                                        <li>
+                                            <a href="#0">Shop</a>
+                                            <ul class="lab-ul">
+                                                <li><a href="{% url 'productspage' %}">Products Page</a></li>
+                                                <li><a href="{% url 'productsdetails' %}">Products Details</a></li>
+                                            
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'gallery' %}">Gallery</a>
+                                            
+                                        </li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                        
+                                    </ul>
+                                    <ul class="lab-ul search-cart">
+                                        <!-- <li>
+                                            <div class="cart-option">
+                                                <i class="icofont-cart-alt"></i>
+                                                <div class="cart-content">
+                                                    <div class="cart-item">
+                                                        <div class="cart-img">
+                                                            <a href="#"><img
+                                                                    src="{% static 'assets/images/products/product/01.png' %}"
+                                                                    alt="cart"></a>
+                                                        </div>
+                                                        <div class="cart-des">
+                                                            <a href="#">Product Title Here</a>
+                                                            <p>$20.00</p>
+                                                        </div>
+                                                        <div class="cart-btn">
+                                                            <a href="#"><i class="icofont-close-circled"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-item">
+                                                        <div class="cart-img">
+                                                            <a href="#"><img
+                                                                    src="{% static 'assets/images/products/product/02.png' %}"
+                                                                    alt="cart"></a>
+                                                        </div>
+                                                        <div class="cart-des">
+                                                            <a href="#">Product Title Here</a>
+                                                            <p>$20.00</p>
+                                                        </div>
+                                                        <div class="cart-btn">
+                                                            <a href="#"><i class="icofont-close-circled"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-bottom">
+                                                        <div class="cart-subtotal">
+                                                            <p>Total: <b class="float-right">$40.00</b></p>
+                                                        </div>
+                                                        <div class="cart-action">
+                                                            <a href="#" class="lab-btn"><span>View Cart</span></a>
+                                                            <a href="#" class="lab-btn"><span>Check Out</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li> -->
+                                        <li>
+                                            <div class="search-option">
+                                                <i class="icofont-search-2"></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- desktop menu ending here -->
+    
+
+    {% block content %} {% endblock %}
+
+    <!-- footer section start here -->
+	<footer>
+		<div class="footer-top relative padding-tb bg-ash relative">
+			<div class="shape-images">
+				<img src="{% static 'assets/images/shape-img/01.png' %}" alt="shape-images">
+			</div>
+			<div class="container">
+				<div class="section-wrapper row">
+					<div class="col-xl-3 col-md-6">
+						<div class="post-item">
+							<div class="footer-logo">
+								<img src="{% static 'assets/images/logo/sanjanaagro.png' %}" alt="footer-logo">
+							</div>
+							<p>An innovative business, Sanjana Group of Farms, focuses on the interesting process of egg hatching. Our dedication to bringing the highest caliber white eggs right to your home has altered how we get our hands on farm-fresh goods. </p>
+						</div>
+					</div>
+					<div class="col-xl-3 col-md-6">
+						<div class="post-item">
+							<div class="post-title">
+								<h5>Keep In Touch</h5>
+							</div>
+							<ul class="lab-ul footer-location">
+								<li>
+									<div class="icon-part">
+										<i class="icofont-phone"></i>
+									</div>
+									<div class="content-part">
+										<p><a href="tel:+91-9335663985">+91-9335663985</a></p>
+									</div>
+								</li>
+								<li>
+									<div class="icon-part">
+										<i class="icofont-email"></i>
+									</div>
+									<div class="content-part">
+										<!-- <p>Mon - Fri 09:00 - 18:00</p>
+										<p>(except public holidays)</p> -->
+                                        <p><a href="mailto:info@raghavfarms.com">info@raghavfarms.com</a></p>
+									</div>
+								</li>
+								<li>
+									<div class="icon-part">
+										<i class="icofont-location-pin"></i>
+									</div>
+									<div class="content-part">
+										<p>Sanjana Group of Farms<br>
+                                            122/715, Second Floor<br>
+                                            Shastri Nagar<br>
+                                            Kanpur-208005<br>
+                                            ICICI Bank Building </p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xl-3 col-md-6">
+						<div class="post-item">
+							<div class="post-title">
+								<h5>Poultry Farm Product</h5>
+							</div>
+							<div class="lab-ul footer-post">
+								<div class="media mb-3">
+									<div class="fp-thumb mr-3">
+										<img src="{% static 'assets/images/products/product/01.png' %}" alt="recent-post">
+									</div>
+									<div class="media-body">
+										<a href="#">
+											<h6 class="mt-0">Light Brown Eggs</h6>
+										</a>
+										<span class="price">$25.99</span>
+									</div>
+								</div>
+								<div class="media mb-3">
+									<div class="fp-thumb mr-3">
+										<img src="{% static 'assets/images/products/product/02.png' %}" alt="recent-post">
+									</div>
+									<div class="media-body">
+										<a href="#">
+											<h6 class="mt-0">Little Chicken Broiler</h6>
+										</a>
+										<span class="price">$25.99</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-md-6">
+						<div class="post-item">
+							<div class="post-title">
+								<h5>Instagram Feed</h5>
+							</div>
+							<div class="lab-ul footer-gellary">
+								<figure class="figure">
+									<a href="{% static 'assets/images/gallery/01.jpg' %}"
+										data-rel="lightcase:myCollection:slideshow"><img
+											src="{% static 'assets/images/gallery/01.jpg' %}" class="img-fluid rounded"
+											alt="footer-gellary"></a>
+								</figure>
+								<figure class="figure">
+									<a href="{% static 'assets/images/gallery/02.jpg' %}"
+										data-rel="lightcase:myCollection:slideshow"><img
+											src="{% static 'assets/images/gallery/02.jpg' %}" class="img-fluid rounded"
+											alt="footer-gellary"></a>
+								</figure>
+								<figure class="figure">
+									<a href="{% static 'assets/images/gallery/03.jpg' %}"
+										data-rel="lightcase:myCollection:slideshow"><img
+											src="{% static 'assets/images/gallery/03.jpg' %}" class="img-fluid rounded"
+											alt="footer-gellary"></a>
+								</figure>
+								<figure class="figure">
+									<a href="{% static 'assets/images/gallery/04.jpg' %}"
+										data-rel="lightcase:myCollection:slideshow"><img
+											src="{% static 'assets/images/gallery/04.jpg' %}" class="img-fluid rounded"
+											alt="footer-gellary"></a>
+								</figure>
+								<figure class="figure">
+									<a href="{% static 'assets/images/gallery/05.jpg' %}"
+										data-rel="lightcase:myCollection:slideshow"><img
+											src="{% static 'assets/images/gallery/05.jpg' %}" class="img-fluid rounded"
+											alt="footer-gellary"></a>
+								</figure>
+								<figure class="figure">
+									<a href="{% static 'assets/images/gallery/06.jpg' %}"
+										data-rel="lightcase:myCollection:slideshow"><img
+											src="{% static 'assets/images/gallery/06.jpg' %}" class="img-fluid rounded"
+											alt="footer-gellary"></a>
+								</figure>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="section-wrapper">
+					<p class="text-center">&copy; 2023 <a href="#">Sanjana agrovate </a>.All Rights Reserved By <a
+							href="https://socialforyoou.com/aboutus" target="_blank">Social For Yoou</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- footer section start here -->
+
+	<!-- scrollToTop start here -->
+	<a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i><span class="pluse_1"></span><span
+			class="pluse_2"></span></a>
+	<!-- scrollToTop ending here -->
+
+
+	<script src="{% static 'assets/js/jquery.js' %}"></script>
+	<script src="{% static 'assets/js/fontawesome.min.js' %}"></script>
+	<script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/js/swiper.min.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.countdown.min.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.counterup.min.js' %}"></script>
+	<script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'assets/js/lightcase.js' %}"></script>
+	<script src="{% static 'assets/js/functions.js' %}"></script>
+</body>
