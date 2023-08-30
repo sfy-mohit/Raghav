@@ -70,6 +70,7 @@ class Feature(models.Model):
       def __str__(self):
         return self.feature_title
   
+# for history section ion About Page 
 class Achievement(models.Model):
       achievement_icon = models.ImageField(upload_to='app1/media/achievement')
       achievement_title = models.CharField(max_length=50)
@@ -77,7 +78,8 @@ class Achievement(models.Model):
       
       def __str__(self):
         return self.achievement_title
-
+  
+# for Raghav---
 class ContactForm(models.Model):
       username = models.CharField(max_length=100)
       email = models.EmailField(max_length=50,null=True,blank=True)
@@ -86,7 +88,28 @@ class ContactForm(models.Model):
       
       def __str__(self):
         return self.username
+  
+# for Sanjana Organics---
+class ContactForm1(models.Model):
+      username1 = models.CharField(max_length=100)
+      email1 = models.EmailField(max_length=50,null=True,blank=True)
+      subject1 = models.CharField(max_length=50,null=True,blank=True)
+      message1 = models.TextField(null=True,blank=True)
       
+      def __str__(self):
+        return self.username1
+  
+# for Sanjana Aggrovate--
+class ContactForm2(models.Model):
+      username2 = models.CharField(max_length=100)
+      email2 = models.EmailField(max_length=50,null=True,blank=True)
+      subject2 = models.CharField(max_length=50,null=True,blank=True)
+      message2 = models.TextField(null=True,blank=True)
+      
+      def __str__(self):
+        return self.username2    
+
+# for Sanjana Aggrovate Page
 class Product2(models.Model):
 
     product_name = models.CharField(max_length=70)    
