@@ -89,3 +89,174 @@ class MyModel(models.Model):
 
 
 <a href="{{ anchor_url }}">Click here</a>
+
+
+
+
+for login
+
+<div class="form-outline mb-4">
+    <input type="email" id="form2Example1" class="form-control" />
+    <label class="form-label" for="form2Example1">Email address</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form2Example2" class="form-control" />
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
+
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+  <!-- Register buttons -->
+  <div class="text-center">
+      <p>Not a member? <a href="#!">Register</a></p>
+      <p>or sign up with:</p>
+      <button type="button" class="btn btn-secondary btn-floating mx-1">
+          <i class="fab fa-facebook-f"></i>
+      </button>
+
+      <button type="button" class="btn btn-secondary btn-floating mx-1">
+          <i class="fab fa-google"></i>
+      </button>
+
+      <button type="button" class="btn btn-secondary btn-floating mx-1">
+          <i class="fab fa-twitter"></i>
+      </button>
+
+      <button type="button" class="btn btn-secondary btn-floating mx-1">
+          <i class="fab fa-github"></i>
+      </button>
+  </div>
+
+-----------------------------------
+
+  <div class="contact-section padding-tb ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="contac-top">
+                    <div class="section-header ">
+                        <h2>User Login</h2>
+                    </div>
+                </div>
+                <div class="contac-bottom">
+                    <div class="row justify-content-center">
+
+                        {% if username2 %}
+
+                        <center>
+                            <h2>Thanks {{ username2 }}! </h2>
+                            <p>We received your email and will response shortly.</p>
+                        </center>
+                        <br><br>
+                        {% else %}
+
+                        <div class="col-lg-6 col-12">
+                            <div class="contact-form">
+                                <form action="{% url 'sanjanaagro_contact' %}" method="POST" class="comment-form">
+                                    {% csrf_token %}
+
+                                    <input type="text" name="Username" class="" placeholder="username*" autofocus>
+                                    <input type="text" name="Password" class="" placeholder="Password*">
+                                    <div class="row mb-4">
+                                        <div class="col d-flex justify-content-center">
+                                            <!-- Checkbox -->
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id=""
+                                                    checked />
+                                                <label class="form-check-label"> Remember me </label>
+                                            </div>
+                                        
+                                           
+                                        </div>
+                                        <div class="col d-flex justify-content-center">
+                                            <div class="forget">
+                                                <!-- Simple link -->
+                                                <a href="{% url 'forget' %}">Forgot password?</a>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <button type="submit" name="submit-form" class="lab-btn">
+
+                                        <span>Sign in</span>
+                                    </button>
+                                    <div class="text-center">
+                                        <p>Not a member? <a href="{% url 'registration' %}">Register</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- profile section dummy -->
+
+<section class="vh-100" style="background-image: url('/static/assets/images/User/01.jpg');">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-lg-6 mb-4 mb-lg-0">
+                <div class="card mb-3" style="border-radius: .5rem;">
+                    <div class="row g-0">
+                        {% if user.is_authenticated %}
+                        <div class="col-md-4 gradient-custom text-center text-white"
+                            style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+
+
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                            <h5>Profile Name</h5>
+                            <p style="color:#f4f5f7">{{details.first_name}} {{details.last_name}} {{name}}</p>   
+                            <!-- first name last name nahi chal raha hai -->
+                            <!-- <i class="far fa-edit mb-5"></i> -->
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body p-4">
+                                <h6>Information</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Email</h6>
+                                        <p class="text-muted">{{details.email}}</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Phone</h6>
+                                        <p class="text-muted">{{details.phone}}</p>
+                                    </div>
+                                </div>
+                                <h6>Projects</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Username</h6>
+                                        <p class="text-muted">{{user}}</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Password</h6>
+                                        <p class="text-muted">{{details.pass1}}</p>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="d-flex justify-content-start">
+                    <a href="#!"><i class="fab fa-facebook-f fa-lg me-3"></i></a>
+                    <a href="#!"><i class="fab fa-twitter fa-lg me-3"></i></a>
+                    <a href="#!"><i class="fab fa-instagram fa-lg"></i></a>
+                  </div> -->
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

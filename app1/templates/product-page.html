@@ -8,9 +8,9 @@
     <div class="overlay"></div>
     <div class="container">
         <div class="page-header-content-area">
-            <h4 class="ph-title">Poultry Farm Products</h4>
+            <h4 class="ph-title">Products</h4>
             <ul class="lab-ul">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a class="active">Products</a></li>
             </ul>
         </div>
@@ -59,38 +59,41 @@
                 </div>
                 <div class="col-lg-9 col-12">
                     <article>
-                        <div class="shop-title d-flex flex-wrap justify-content-between bg-ash">
-                            <p>Showing 01 - 12 of 139 Results</p>
+                        <!-- <div class="shop-title d-flex flex-wrap justify-content-between bg-ash">
+                            <p>Showing Results</p>
                             <div class="product-view-mode">
                                 <a class="active" data-target="grids"><i class="icofont-ghost"></i></a>
-                                <a data-target="lists"><i class="icofont-listing-box"></i></a>
+                                 <a data-target="lists"><i class="icofont-listing-box"></i></a>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <div class="shop-product-wrap grids row justify-content-center">
+                        <div class="shop-product-wrap grids row justify-content-center padding-top">
                             {% for n in productsData  %}
                             <div class="col-lg-4 col-md-6 col-12">
                                 <div class="product-item">
-                                    <div class="product-thumb">
+                                    <div class="">
                                         <img src="{{n.image}}" alt="shope">
-                                        <div class="product-action-link">
+                                        <!-- <div class="product-action-link">
                                             <a href="{{n.image}}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
+                                                data-rel="lightcase">
+                                                <i class="far fa-heart"></i></a>
+                                            <a href="#"><i class="fas fa-sync-alt"></i></a>
                                             <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="product-content">
                                         <h6><a href="#">{{n.product_name}}</a></h6>
-                                        <div class="rating mb-1">
+                                        <!-- <div class="rating mb-1">
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>{{n.price}}</h6>
+                                        </div> -->
+                                        <!-- <h6>{{n.price}}</h6> -->
+                                        <!-- <a href="#" class="lab-btn d-inline-b">Add to cart</a> -->
                                     </div>
+                                    
                                 </div>
                               
                               
@@ -106,16 +109,16 @@
                                     </div>
                                     <div class="product-content">
                                         <h6><a href="#">{{n.product_name}}</a></h6>
-                                        <div class="rating mb-1">
+                                        <!-- <div class="rating mb-1">
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>
+                                        </div> -->
+                                        <!-- <h6>
                                             {{n.price}}
-                                        </h6>
+                                        </h6> -->
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                                             veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -147,412 +150,7 @@
                                         <h6>$200</h6>
                                     </div>
                                 </div>
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/02.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/02.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Title Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>
-                                            $200
-                                        </h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/03.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/03.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Text Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>$200</h6>
-                                    </div>
-                                </div>
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/03.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/03.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Title Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>
-                                            $200
-                                        </h6>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                            commodo</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/04.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/04.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Text Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>$200</h6>
-                                    </div>
-                                </div>
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/04.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/04.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Title Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>
-                                            $200
-                                        </h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/05.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/05.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Text Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>$200</h6>
-                                    </div>
-                                </div>
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/05.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/05.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Title Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>
-                                            $200
-                                        </h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/06.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/06.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Text Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>$200</h6>
-                                    </div>
-                                </div>
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/06.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/06.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Title Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>
-                                            $200
-                                        </h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/04.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/04.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Text Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>$200</h6>
-                                    </div>
-                                </div>
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/04.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/04.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Title Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>
-                                            $200
-                                        </h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/05.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/05.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Text Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>$200</h6>
-                                    </div>
-                                </div>
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/05.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/05.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Title Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>
-                                            $200
-                                        </h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="product-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/06.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/06.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Text Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>$200</h6>
-                                    </div>
-                                </div>
-                                <div class="product-list-item">
-                                    <div class="product-thumb">
-                                        <img src="{% static 'assets/images/product/06.jpg' %}" alt="shope">
-                                        <div class="product-action-link">
-                                            <a href="{% static 'assets/images/product/06.jpg' %}"
-                                                data-rel="lightcase"><i class="icofont-eye"></i></a>
-                                            <a href="#"><i class="icofont-heart-alt"></i></a>
-                                            <a href="#"><i class="icofont-cart-alt"></i></a>
-                                        </div>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6><a href="#">Product Title Here</a></h6>
-                                        <div class="rating mb-1">
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                            <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>
-                                            $200
-                                        </h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam,
-                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        </p>
-                                    </div>
-                                </div>
+                                
                             </div> -->
                         </div>
 
@@ -567,12 +165,7 @@
                                 <li class="d-none d-sm-block">
                                     <a href="#">2</a>
                                 </li>
-                                <li class="d-none d-sm-block">
-                                    <a class="dot">...</a>
-                                </li>
-                                <li class="d-none d-sm-block">
-                                    <a href="#">5</a>
-                                </li>
+                                
                                 <li class="d-none d-sm-block">
                                     <a href="#"><i class="icofont-rounded-double-right"></i></a>
                                 </li>
@@ -582,7 +175,7 @@
                 </div>
                 <div class="col-lg-3 col-md-7 col-12">
                     <aside>
-                        <div class="widget widget-search bg-ash px-3">
+                        <!-- <div class="widget widget-search bg-ash px-3">
                             <div class="widget-header">
                                 <h5>Search keywords</h5>
                             </div>
@@ -590,7 +183,7 @@
                                 <input type="text" name="s" placeholder="Your Search...">
                                 <button type="submit"><i class="icofont-search-2"></i></button>
                             </form>
-                        </div>
+                        </div> -->
 
                         <!-- <div class="widget widget-category bg-ash px-3">
                             <div class="widget-header">
@@ -606,48 +199,7 @@
                                             <li><a href="#">Apple 3</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#0">Orange</a>
-                                        <ul class="lab-ul shop-submenu">
-                                            <li><a href="#">Orange 1</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#0">Tomato</a>
-                                        <ul class="lab-ul shop-submenu">
-                                            <li><a href="#">Tomato 1</a></li>
-                                            <li><a href="#">Tomato 2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#0">Honey</a>
-                                        <ul class="lab-ul shop-submenu">
-                                            <li><a href="#">Honey 1</a></li>
-                                            <li><a href="#">Honey 2</a></li>
-                                            <li><a href="#">Honey 3</a></li>
-                                            <li><a href="#">Honey 4</a></li>
-                                            <li><a href="#">Honey 5</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#0">Banana</a>
-                                        <ul class="lab-ul shop-submenu">
-                                            <li><a href="#">Banana 1</a></li>
-                                            <li><a href="#">Banana 2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#0">Blueberry</a>
-                                        <ul class="lab-ul shop-submenu">
-                                            <li><a href="#">Blueberry 1</a></li>
-                                            <li><a href="#">Blueberry 2</a></li>
-                                            <li><a href="#">Blueberry 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#0">Lettuce</a>
-                                        <ul class="lab-ul shop-submenu">
-                                            <li><a href="#">Lettuce 1</a></li>
-                                            <li><a href="#">Lettuce 2</a></li>
-                                            <li><a href="#">Lettuce 3</a></li>
-                                            <li><a href="#">Lettuce 4</a></li>
-                                            <li><a href="#">Lettuce 5</a></li>
-                                        </ul>
-                                    </li>
+                                    
                                 </ul>
                             </div>
                         </div> -->
@@ -658,7 +210,7 @@
                             </div>
                             <ul class="lab-ul widget-wrapper">
 
-                                {% for n in productsData  %}
+                                {% for n in productsData %}
                                 <li class="d-flex flex-wrap justify-content-between">
                                     <div class="post-thumb">
                                         <a href="blog-single.html"><img
@@ -668,14 +220,14 @@
                                         <a href="blog-single.html">
                                             <h6>{{n.product_name}}</h6>
                                         </a>
-                                        <div class="rating">
+                                        <!-- <div class="rating">
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
                                             <span><a href="#"><i class="far fa-star"></i></a></span>
-                                        </div>
-                                        <h6>{{n.price}}</h6>
+                                        </div> -->
+                                        <!-- <h6>{{n.price}}</h6> -->
                                     </div>
                                 </li>
                                 {% endfor  %}

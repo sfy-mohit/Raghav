@@ -17,10 +17,10 @@
 						<div class="row flex-row-reverse justify-content-center align-items-center">
 							<div class="col-12">
 								<div class="banner-content">
-									<h1 class="banner-title"><B class="d-lg-block">Sanjana organics</B>
+									<h1 class="banner-title"><B class="d-lg-block">Sanjana Organics</B>
 										Nurturing Growth Naturally- Your Source for Exceptional Compost and Enriching
-										Manure. </h1>
-									<a href="#" class="lab-btn"><span>DISCOVER NOW</span></a>
+										Manure. </h1><a href="#" class="lab-btn"><span>DISCOVER NOW</span></a>
+									
 								</div>
 							</div>
 						</div>
@@ -35,7 +35,7 @@
 						<div class="row flex-row-reverse justify-content-center align-items-center">
 							<div class="col-12">
 								<div class="banner-content">
-									<h1 class="banner-title"><B class="d-lg-block">Sanjana organics</B>
+									<h1 class="banner-title"><B class="d-lg-block">Sanjana Organics</B>
 										Harvesting Green Gold- Premium Compost and Manure Solutions for Thriving
 										Gardens.</h1>
 									<a href="#" class="lab-btn"><span>DISCOVER NOW</span></a>
@@ -53,8 +53,8 @@
 						<div class="row flex-row-reverse justify-content-center align-items-center">
 							<div class="col-12">
 								<div class="banner-content">
-									<h1 class="banner-title"><B class="d-lg-block">Sanjana organics </B>
-										100% <br>Organic<br> Vermicompost </h1>
+									<h1 class="banner-title"><B class="d-lg-block">Sanjana Organics </B>
+										Providing Excellent Compost and Enriching, Your Source for Nurturing Growth Naturally. </h1>
 									<a href="#" class="lab-btn"><span>DISCOVER NOW</span></a>
 								</div>
 							</div>
@@ -73,25 +73,8 @@
 	<div class="container">
 		<div class="row mb-15">
 			<div class="col-xl-7 col-12">
-				<div class="about-left-part">
-					{% for n in product2Data %}
-					<div class="about-item">
-						<div class="about-inner">
-							<div class="about-thumb">
-								<img src="{{n.Product_image.url}}" alt="about">
-							</div>
-							<div class="about-content">
-								<div class="ac-thumb">
-									<img src="{{n.Product_icon.url}}" alt="about Image">
-								</div>
-								<div class="ac-content">
-									<h6>{{n.product_name}}</h6>
-									<p>{{n.product_des}}</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					{% endfor %}
+				<div class="about-thumb">
+					<img src="{% static 'assets/images/about/so1.png' %}" alt="about-thumb">
 				</div>
 			</div>
 			<div class="col-xl-5 col-12">
@@ -109,7 +92,7 @@
 							to retain moisture and essential.
 						</p>
 
-						<a href="#" class="lab-btn mt-2"><span>Read More</span></a>
+						<!-- <a href="#" class="lab-btn mt-2"><span>Read More</span></a> -->
 					</div>
 				</div>
 			</div>
@@ -164,7 +147,7 @@
 		<div class="row justify-content-center">
 			<div class="col-12">
 				<div class="section-header">
-					<h3>Poultry Farm Products</h3>
+					<h3>Products</h3>
 					<p> We are dedicated to fostering a
 						greener world through our premium compost and manure solutions. With a passion for
 						sustainability and a commitment to environmental harmony, we have been at the forefront of
@@ -175,7 +158,7 @@
 			<div class="col-12">
 				<div class="section-wrapper">
 					<div class="row justify-content-center mb-15-none">
-						{% for n in productsData %}
+						{% for n in product3Data %}
 						<div class="col-xl-3 col-lg-4 col-sm-6 col-12">
 							<div class="product-item-2">
 								<div class="product-inner">
@@ -183,20 +166,20 @@
 										<img src="{{n.Product_image.url}}" alt="product">
 									</div>
 									<div class="product-content">
-										<a href="#">
+										<!-- <a href="#">
 											<h6>{{n.product_name}}</h6>
-										</a>
-										<div class="rating">
+										</a> -->
+										<!-- <div class="rating">
 											<i class="far fa-star"></i>
 											<i class="far fa-star"></i>
 											<i class="far fa-star"></i>
 											<i class="far fa-star"></i>
 											<i class="far fa-star"></i>
-										</div>
-										<h6 class="price">{{n.price}}</h6>
-										<div class="cart-option">
+										</div> -->
+										<!-- <h6 class="price">{{n.price}}</h6> -->
+										<!-- <div class="cart-option">
 											<a href="#" class="lab-btn"><span>Add To Cart</span></a>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>
@@ -207,9 +190,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="text-center mt-3 mb-2">
-			<a href="#" class="lab-btn"><span>Shop Now</span></a>
-		</div>
+		<!-- <div class="text-center mt-3 mb-2">
+			<a href="{% url 'productspage' %}" class="lab-btn"><span>Shop Now</span></a>
+		</div> -->
 	</div>
 </section>
 <!-- product category section ending here -->
@@ -220,22 +203,22 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="section-header">
-					<h3>Poultry Farm Gallery</h3>
+					<h3>Gallery</h3>
 					<p>Our products are made to improve the health of the soil, encourage plant growth, and help create a more sustainable and prosperous future.</p>
 				</div>
 			</div>
 			<div class="col-12">
 				<div class="gallery-content">
 					<div class="gallery-grid text-center">
-						{% for n in galleryData %}
+						{% for n in gallerysoData %}
 						<a href="{{n.image}}" data-rel="lightcase:myCollection:slideshow" class="grid-image">
 							<img src="{{n.image.url}}" alt="gallery-image">
 						</a>
 						{% endfor %}
 					</div>
-					<div class="gallery-btn text-center mt-5">
-						<a href="#" class="lab-btn"><span>Load Gallery</span></a>
-					</div>
+						<!-- <div class="gallery-btn text-center mt-5">
+							<a href="#" class="lab-btn"><span>Load Gallery</span></a>
+						</div> -->
 				</div>
 			</div>
 		</div>
@@ -271,7 +254,7 @@ Video Section Ending here-->
 								<div class="lab-item">
 									<div class="lab-inner">
 										<div class="lab-thumb">
-											<img src="{% static 'assets/images/about/history/01.jpg' %}"
+											<img src="{% static 'assets/images/about/history/2.jpg' %}"
 												alt="history-img">
 										</div>
 										<div class="lab-content">
@@ -305,7 +288,7 @@ Video Section Ending here-->
 								<div class="lab-item">
 									<div class="lab-inner">
 										<div class="lab-thumb">
-											<img src="{% static 'assets/images/about/history/01.jpg' %}"
+											<img src="{% static 'assets/images/about/history/2.jpg' %}"
 												alt="history-img">
 										</div>
 										<div class="lab-content">
@@ -378,7 +361,7 @@ Video Section Ending here-->
 										</div>
 									</div>
 								</div>
-								<div class="col-xl-6 col-lg-3 col-md-3 col-6">
+								<!-- <div class="col-xl-6 col-lg-3 col-md-3 col-6">
 									<div class="lab-item">
 										<div class="lab-inner text-center">
 											<div class="lab-thumb mb-3">
@@ -391,7 +374,7 @@ Video Section Ending here-->
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 								<div class="col-xl-6 col-lg-3 col-md-3 col-6">
 									<div class="lab-item">
 										<div class="lab-inner text-center">
@@ -400,7 +383,7 @@ Video Section Ending here-->
 													alt="Customer">
 											</div>
 											<div class="lab-content">
-												<h3><span class="counter">50</span>+</h3>
+												<h3><span class="counter">12</span>+</h3>
 												<h5>Volunteer</h5>
 											</div>
 										</div>
@@ -445,7 +428,7 @@ Video Section Ending here-->
 			<div class="row align-items-center">
 				<div class="col-lg-6 col-12">
 					<div class="lab-item">
-						<div class="lab-thumb"><img src="{% static 'assets/images/about/02.png' %}"
+						<div class="lab-thumb"><img src="{% static 'assets/images/about/so2.png' %}"
 								alt="chicken-life-cycle"></div>
 					</div>
 				</div>

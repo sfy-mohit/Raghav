@@ -12,16 +12,16 @@
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
 				<div class="banner-slider-part"
-					style="background-image: url('/static/assets/images/banner/bg-images/01.jpg');">
-					<div class="overlay"></div>
+					style="background-image: url('/static/assets/images/banner/bg-images/2.jpg');">
+					<!-- <div class="overlay"></div> -->
 					<div class="container">
 						<div class="row flex-row-reverse justify-content-center align-items-center">
 							<div class="col-12">
 								<div class="banner-content">
-									<h1 class="banner-title"><B class="d-lg-block">Sanjana Aggrovate</B>
-										Chickens Specialty Game
-										Eggs And More!!! </h1>
-									<a href="#" class="lab-btn"><span>DISCOVER NOW</span></a>
+									<h1 class="banner-title"><B class="d-lg-block">Delight in a farm-fresh morning</B>
+										Where every golden opportunity starts with our eggs, from our flock to your family.
+ </h1>
+									<a href="{% url 'productspage' %}" class="lab-btn"><span>DISCOVER NOW</span></a>
 								</div>
 							</div>
 						</div>
@@ -30,16 +30,16 @@
 			</div>
 			<div class="swiper-slide">
 				<div class="banner-slider-part"
-					style="background-image: url('/static/assets/images/banner/bg-images/02.jpg');">
-					<div class="overlay"></div>
+					style="background-image: url('/static/assets/images/banner/bg-images/3.jpg');">
+					
 					<div class="container">
 						<div class="row flex-row-reverse justify-content-center align-items-center">
 							<div class="col-12">
 								<div class="banner-content">
-									<h1 class="banner-title"><B class="d-lg-block">Sanjana Aggrovate</B>
-										Chickens Specialty Game
-										Eggs And More!!! </h1>
-									<a href="#" class="lab-btn"><span>DISCOVER NOW</span></a>
+									<h1 class="banner-title"><B class="d-lg-block">Experience the magic of farm-fresh meals</B>
+										One eggshell at a time, as we bring the farm to your kitchen.
+</h1>
+									<a href="{% url 'productspage' %}" class="lab-btn"><span>DISCOVER NOW</span></a>
 								</div>
 							</div>
 						</div>
@@ -48,16 +48,16 @@
 			</div>
 			<div class="swiper-slide">
 				<div class="banner-slider-part"
-					style="background-image: url('/static/assets/images/banner/bg-images/01.jpg');">
-					<div class="overlay"></div>
+					style="background-image: url('/static/assets/images/banner/bg-images/4.jpg');">
+					
 					<div class="container">
 						<div class="row flex-row-reverse justify-content-center align-items-center">
 							<div class="col-12">
 								<div class="banner-content">
-									<h1 class="banner-title"><B class="d-lg-block">Sanjana Aggrovate</B>
-										Chickens Specialty Game
-										Eggs And More!!! </h1>
-									<a href="#" class="lab-btn"><span>DISCOVER NOW</span></a>
+									<h1 class="banner-title"><B class="d-lg-block">Celebrate with eggs</B>
+										Worth savoring	Fresh, wholesome and bursting with flavor, from our farms to your table.
+ </h1>
+									<a href="{% url 'productspage' %}" class="lab-btn"><span>DISCOVER NOW</span></a>
 								</div>
 							</div>
 						</div>
@@ -78,7 +78,7 @@
 			<div class="col-xl-5 col-12">
 				<div class="about-wrapper p-0">
 					<div class="about-title">
-						<h2><span class="d-lg-block">Welcome to Sanjana Agrovate Group & Farms </span></h2>
+						<h2><span class="d-lg-block">Welcome to Sanjana Agrovate </span></h2>
 					</div>
 					<div class="about-content">
 						<p>We are more than just a poultry and egg farm – we are cultivators of quality and nourishment.
@@ -107,7 +107,7 @@
 				</div>
 			</div>
 			<div class="col-xl-7 col-12">
-				<div class="about-left-part">
+				<!-- <div class="about-left-part">
 					<div class="about-item">
 						<div class="about-inner">
 							<div class="about-thumb">
@@ -156,6 +156,9 @@
 							</div>
 						</div>
 					</div>
+				</div> -->
+				<div class="about-thumb" style="padding-top:100px">
+					<img src="{% static 'assets/images/about/3.jpg' %}" alt="about-thumb">
 				</div>
 			</div>
 		</div>
@@ -168,7 +171,7 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="section-header">
-						<h3>Poultry Farm Services</h3>
+						<h3>Services</h3>
 						<p>We offer tailored solutions that align with the unique needs of your operation. Our 									team of
 							experts specializes in providing a range of services, from farm design and setup to
 							optimized feed management and health protocols. With a focus on efficiency and
@@ -178,14 +181,14 @@
 					</div>
 				</div>
 				<div class="col-12">
-					<div class="service-content">
+					<div class="service-content ">
 						<div class="row">
 
 							{% for n in servicesData  %}
-							<div class="col-lg-6 col-md-6">
-								<div class="lab-item service-item">
-									<div class="lab-inner p-4 mb-4 text-left">
-										<div class="service-top d-flex align-items-center mb-4">
+							<div class="col-lg-6 col-md-6 ">
+								<div class="lab-item service-item ">
+									<div class="lab-inner p-4 mb-4 text-left  ">
+										<div class="service-top d-flex align-items-center mb-4 ">
 											<div class="st-thumb mr-3">
 												<img src="{{n.service_icon.url}}">
 											</div>
@@ -218,7 +221,7 @@
 		<div class="row justify-content-center">
 			<div class="col-12">
 				<div class="section-header">
-					<h3>Poultry Farm Products</h3>
+					<h3>Products</h3>
 					<p>Encompassing all these facets is our meticulously managed Poultry Farm, where every rhythm of life aligns with the standards of quality production and ethical care. Here, the essence of responsibility and sustainability intertwines, creating an environment where our poultry thrives. </p>
 				</div>
 			</div>
@@ -226,28 +229,29 @@
 				<div class="section-wrapper">
 					<div class="row justify-content-center mb-15-none">
 
-						{% for n in productsData %}
+						{% for n in product2Data %}
 						<div class="col-xl-3 col-lg-4 col-sm-6 col-12">
 							<div class="product-item-2">
 								<div class="product-inner">
 									<div class="product-thumb">
-										<img src="{{n.Product_image.url}}" alt="product">
+										<img src="{{n.Product_image.url}}" alt="produc">
 									</div>
 									<div class="product-content">
 										<a href="#">
 											<h6>{{n.product_name}}</h6>
 										</a>
-										<div class="rating">
+										<!-- <div class="rating">
 											<i class="far fa-star"></i>
 											<i class="far fa-star"></i>
 											<i class="far fa-star"></i>
 											<i class="far fa-star"></i>
 											<i class="far fa-star"></i>
-										</div>
-										<h6 class="price">{{n.price}}</h6>
-										<div class="cart-option">
+										</div> -->
+										<!-- <h6 class="price">{{n.price}}</h6> -->
+									
+										<!-- <div class="cart-option">
 											<a href="#" class="lab-btn"><span>Add To Cart</span></a>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>
@@ -258,9 +262,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="text-center mt-3 mb-2">
-			<a href="#" class="lab-btn"><span>Shop Now</span></a>
-		</div>
+		<!-- <div class="text-center mt-3 mb-2">
+			<a href="{% url 'productspage' %}" class="lab-btn"><span>Shop Now</span></a>
+		</div> -->
 	</div>
 </section>
 <!-- product category section ending here -->
@@ -271,22 +275,22 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="section-header">
-					<h3>Poultry Farm Gallery</h3>
+					<h3>Gallery</h3>
 					<p>Our poultry flocks are raised in spacious, comfortable environments, resulting in healthier birds that produce superior eggs. Through sustainable practices and a focus on animal welfare, we deliver products that reflect our values of excellence and integrity. </p>
 				</div>
 			</div>
 			<div class="col-12">
 				<div class="gallery-content">
 					<div class="gallery-grid text-center">
-						{% for n in galleryData %}
+						{% for n in gallerysaData %}
 						<a href="{{n.image}}" data-rel="lightcase:myCollection:slideshow" class="grid-image">
 							<img src="{{n.image.url}}" alt="gallery-image">
 						</a>
 						{% endfor %}
 					</div>
-					<div class="gallery-btn text-center mt-5">
+					<!-- <div class="gallery-btn text-center mt-5">
 						<a href="#" class="lab-btn"><span>Load Gallery</span></a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -364,7 +368,7 @@ Video Section Ending here-->
 									</div>
 									<div class="lci-right">
 										<h6>Poultry Farm</h6>
-										<p>An establishment dedicated to raising poultry for meat and eggs.</p>
+										<p>An establishment dedicated to raising poultry for eggs.</p>
 									</div>
 								</div>
 							</div>
@@ -559,7 +563,7 @@ Video Section Ending here-->
 										</div>
 									</div>
 								</div>
-								<div class="col-xl-6 col-lg-3 col-md-3 col-6">
+								<!-- <div class="col-xl-6 col-lg-3 col-md-3 col-6">
 									<div class="lab-item">
 										<div class="lab-inner text-center">
 											<div class="lab-thumb mb-3">
@@ -572,7 +576,7 @@ Video Section Ending here-->
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 								<div class="col-xl-6 col-lg-3 col-md-3 col-6">
 									<div class="lab-item">
 										<div class="lab-inner text-center">
@@ -581,7 +585,7 @@ Video Section Ending here-->
 													alt="Customer">
 											</div>
 											<div class="lab-content">
-												<h3><span class="counter">50</span>+</h3>
+												<h3><span class="counter">12</span>+</h3>
 												<h5>Volunteer</h5>
 											</div>
 										</div>

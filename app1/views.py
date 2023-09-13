@@ -1,9 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render , HttpResponse
+# from django.contrib.auth.forms import UserCreationForm
+from .models import SignupForm
+from django.contrib.auth import authenticate, login ,logout
+from django.contrib.auth.decorators import login_required          # not access without login use for required login
+from django.contrib import messages
 from .models import Service
 from .models import Banner
-from .models import Product
-from .models import Product2
-from .models import Gallery
+from .models import Product                                # raghav pro
+from .models import Product2                               # sanjana aggrovate product
+from .models import Product3                               # sasnjana organics product
+from .models import Gallery                                # rahghav & gallery page
+from .models import Galleryso                              # sanjana organics
+from .models import Gallerysa                              # sanjana aggrovate
 from .models import Sidebanner
 from .models import Member
 from .models import News
@@ -12,7 +20,7 @@ from .models import Achievement
 from .models import ContactForm
 from .models import ContactForm1
 from .models import ContactForm2
-
+from .models import Signup
 
 # Create your views here.
 
@@ -69,6 +77,8 @@ def productspage(request):
 
 def productsdetails(request):
     return render(request,"product-single.html")
+
+# gallery for home page or gallery section
 
 def gallery(request):
     galleryData = Gallery.objects.all()
@@ -136,17 +146,17 @@ def sanjanaagro_contact(request):
 # Sanjana Organics Page 
 
 def sanjana(request):
-    product2Data = Product2.objects.all()
+    product3Data = Product3.objects.all()
     servicesData=Service.objects.all()[8:12]
-    galleryData = Gallery.objects.all()
+    gallerysoData = Galleryso.objects.all()
     newsData = News.objects.all()
     productsData = Product.objects.all()  
-    
+    print(product3Data)
     Context = { 
             ''
-            'product2Data':product2Data,
+            'product3Data':product3Data,
             'servicesData':servicesData,
-            'galleryData':galleryData,
+            'gallerysoData':gallerysoData,
             'newsData':newsData,
             'productsData':productsData,
             
@@ -158,23 +168,112 @@ def sanjana(request):
 def sanjana2(request):
     product2Data = Product2.objects.all()
     servicesData=Service.objects.all()[4:8]
-    galleryData = Gallery.objects.all()
+    gallerysaData = Gallerysa.objects.all()
     productsData = Product.objects.all()  
+    print(product2Data)
     
     Context = { 
-            ''
             'product2Data':product2Data,
             'servicesData':servicesData,
-            'galleryData':galleryData,
+            'gallerysaData':gallerysaData,
             'productsData':productsData,
-            
          }
     return render(request,"sanjana-agro.html",Context)
 
+# this registration page is not in used 
+
+def registration(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        mobile = request.POST.get('mobile')
+        email1 = request.POST.get('email')
+        username = request.POST.get('username')
+        pass1 = request.POST.get('pass1')
+        pass2 = request.POST.get('pass2')
+        
+        if len(username)>10:
+            messages.error(request, " Your user name must be under 10 characters")
+            return render(request,"registration.html")
+
+        if not username.isalnum():
+            messages.error(request, " User name should only contain letters and numbers")
+            return render(request,"registration.html")
+        if (pass1!= pass2):
+            messages.error(request, " Passwords do not match")
+            return render(request,"registration.html")
+         
+        signup_data = Signup( name=name ,username=username, mobile=mobile ,email1=email1, pass1=pass1 , pass2=pass2)
+        signup_data.save()
+        Context = {
+        'username':username,
+        'name':name,
+        'pass1':pass1       
+        }
+        return render(request,'registration.html',Context)
+    else:
+        return render(request,"registration.html")
 
 
+# user login
+
+def ulogin(request):
+    if request.method == 'POST' :
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(request , username=username ,password=password)    
+        if user is not None:    # if user exist            
+            login(request, user )
+            messages.success(request,('You are logged in'))
+            return redirect ('/')      # routes to 'index page' on successful login
+        else:
+            messages.warning(request,('Error logging in'))
+            return redirect('ulogin')
+    else:
+        return render(request,'login.html')
+
+# user logout 
+
+def ulogout(request):
+	logout(request)
+	messages.success(request,('Youre now logged out'))
+	return redirect('/')
+
+def forget(request):
+    return render(request,"forget.html")
 
 
+# user Profile page releted to registration2
 
 
+@login_required(login_url='ulogin')                            # not access without login
+def profile(request):   
+    if request.user.is_authenticated:
+        details = request.user
+        return render(request,"profile.html",{'details':details })
+    else:
+        return render(request, 'registration2.html')
+    
+# fields = ['first_name', 'last_name', 'phone_no', 'email', 'username', 'password1', 'password2']
+
+
+# Signup Form used registration page
+
+def registration2(request):
+    form = SignupForm()
+    if request.method=='POST':
+        form=SignupForm(request.POST)
+        if form.is_valid():
+            form.save()
+            
+            messages.success(request,('Youre succesfully registered.Plz login for Continue'))
+            return render(request,"login.html")
+    context ={
+        'form':form
+    }
+    return render(request, 'registration2.html',context)
+
+
+        
+  
 

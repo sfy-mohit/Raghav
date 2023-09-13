@@ -5,6 +5,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
+
 urlpatterns = [ 
     
     path('',views.index,name='index'),
@@ -19,7 +20,12 @@ urlpatterns = [
     path("productsdetails", views.productsdetails, name="productsdetails" ) ,
     path("sanjana/", views.sanjana, name="sanjana" ) ,                                            # sanjana organics 
     path("sanjana2/", views.sanjana2, name="sanjana2" ) ,                                         # sanjana 
-     
+    path("ulogin", views.ulogin, name="ulogin" ) ,                                                  # #Login page
+    path("ulogout", views.ulogout, name="ulogout" ) ,                                             # Logout page
+    path("registration", views.registration, name="registration" ) ,  
+    path("profile", views.profile, name="profile" ) ,#Registration page
+    path("forget", views.forget, name="forget" ) ,    
+    path("registration2", views.registration2, name="registration2" ) ,
     
               
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,7 +1,7 @@
 {% load static %}
 
 <head>
-	<title>Poultry Farm</title>
+	<title>Sanjana Agrovate</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -33,7 +33,7 @@
         <!-- preloader ending here -->
     
     
-        <!--search area-->
+        <!--search area
         <div class="search-input">
             <div class="search-close">
                 <i class="icofont-close-circled"></i>
@@ -45,7 +45,7 @@
                 </button>
             </form>
         </div>
-        <!-- search area -->
+         search area -->
     
         <!-- Mobile Menu Start Here -->
         <div class="mobile-menu transparent-header">
@@ -79,9 +79,9 @@
                                 </ul>
                             </li>
 
-                            <li>
+                            <!-- <li>
                                 <a href="{% url 'blog' %}">Blog</a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="{% url 'productspage' %}">Products Page</a>
                                 <!-- <ul class="lab-ul">
@@ -90,6 +90,31 @@
                                 </ul> -->
                             </li>
                             <li><a href="{% url 'contact' %}">Contact</a></li>
+                            {# Will know if user is logged in or not#}
+                        {% if user.is_authenticated %}
+                        
+
+                        <li>
+                            <a href="#0">Hello {{user}}</a>
+                            <ul class="lab-ul">
+                                <li>
+                                    <a href="{% url 'profile' %}">Profile</a> 
+                                </li>
+                                <li>
+                                    <a href="{% url 'ulogout' %}">Logout</a> 
+                                </li>
+                               
+                            </ul>
+                        </li>
+                    
+                        {% else %}
+                        <li>
+                            <a href="{% url 'ulogin' %}">Login</a> 
+                        </li>
+
+                        
+
+                        {% endif%}
                         </ul>
                     </div>
                 </div>
@@ -167,16 +192,16 @@
                                             <a href="#0">About</a>
                                             <ul class="lab-ul">
                                                 <li><a href="{% url 'about' %}">Raghav</a></li>
-                                                <li><a href="{% url 'sanjana' %}">Sanjana organics</a></li>
-                                                <li><a href="{% url 'sanjana2' %}">Sanjana agrovate</a></li>
+                                                <li><a href="{% url 'sanjana' %}">Sanjana Organics</a></li>
+                                                <li><a href="{% url 'sanjana2' %}">Sanjana Agrovate</a></li>
                                             </ul>
                                         </li>
 
 
-                                        <li>
+                                        <!-- <li>
                                             <a href="{% url 'blog' %}">Blog</a>
                                             
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <a href="{% url 'productspage' %}">Products Page</a>
                                             <!-- <ul class="lab-ul">
@@ -190,6 +215,31 @@
                                             
                                         </li>
                                         <li><a href="{% url 'contact' %}">Contact</a></li>
+                                        {# Will know if user is logged in or not#}
+                                        {% if user.is_authenticated %}
+                                        
+                
+                                        <li>
+                                            <a href="#0">Hello {{user}}</a>
+                                            <ul class="lab-ul">
+                                                <li>
+                                                    <a href="{% url 'profile' %}">Profile</a> 
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'ulogout' %}">Logout</a> 
+                                                </li>
+                                               
+                                            </ul>
+                                        </li>
+                                    
+                                        {% else %}
+                                        <li>
+                                            <a href="{% url 'ulogin' %}">Login</a> 
+                                        </li>
+                
+                                        
+                
+                                        {% endif%}
                                         
                                     </ul>
                                     <ul class="lab-ul search-cart">
@@ -237,11 +287,11 @@
                                                 </div>
                                             </div>
                                         </li> -->
-                                        <li>
+                                        <!-- <li>
                                             <div class="search-option">
                                                 <i class="icofont-search-2"></i>
                                             </div>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -321,7 +371,7 @@
 					<div class="col-xl-3 col-md-6">
 						<div class="post-item">
 							<div class="post-title">
-								<h5>Poultry Farm Product</h5>
+								<h5>Product</h5>
 							</div>
 							<div class="lab-ul footer-post">
 								<div class="media mb-3">
@@ -332,7 +382,7 @@
 										<a href="#">
 											<h6 class="mt-0">Light Brown Eggs</h6>
 										</a>
-										<span class="price">$25.99</span>
+										<!-- <span class="price">$25.99</span> -->
 									</div>
 								</div>
 								<div class="media mb-3">
@@ -343,7 +393,7 @@
 										<a href="#">
 											<h6 class="mt-0">Little Chicken Broiler</h6>
 										</a>
-										<span class="price">$25.99</span>
+										
 									</div>
 								</div>
 							</div>

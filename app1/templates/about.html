@@ -4,10 +4,10 @@
 
 <!-- Page Header Section Start Here -->
 <section class="page-header bg_img padding-tb">
-	<div class="overlay"></div>
+	<div class="overlay"></div>	
 	<div class="container">
 		<div class="page-header-content-area">
-			<h4 class="ph-title">Poultry Farm About us</h4>
+			<h4 class="ph-title">About us</h4>
 			<ul class="lab-ul">
 				<li><a href="/">Home</a></li>
 				<li><a class="active">About</a></li>
@@ -18,7 +18,7 @@
 <!-- Page Header Section Ending Here -->
 
 <!-- about section start here -->
-<section class="about-section bg_img relative padding-tb">
+<section class="about-section bg_img relative padding-tb bg-ash">
 	<div class="container">
 		<div class="row align-items-center mb-15">
 			<div class="col-lg-6 col-12">
@@ -58,29 +58,7 @@
 </section>
 <!-- about section ending here -->
 
-<!-- Feature section start here -->
-<section class="feature-section">
-	<div class="container">
-		<div class="row text-center justify-content-center">
-			{% for n in featureData %}
-			<div class="col-lg-3 col-sm-6 col-12">
-				<div class="lab-item">
-					<div class="lab-inner">
-						<div class="lab-thumb">
-							<img src="{{n.feature_icon}}" alt="Feature Image">
-						</div>
-						<div class="lab-content">
-							<h6>{{n.feature_title}}</h6>
-							<p>{{n.feature_des}} </p>
-						</div>
-					</div>
-				</div>
-			</div>
-			{% endfor %}
-		</div>
-	</div>
-</section>
-<!-- Feature section ending here -->
+
 
 <!--History section start here -->
 <section class="history-section padding-tb">
@@ -98,7 +76,7 @@
 								<div class="lab-item">
 									<div class="lab-inner">
 										<div class="lab-thumb">
-											<img src="{% static 'assets/images/about/history/01.jpg' %}"
+											<img src="{% static 'assets/images/about/history/1.jpg' %}"
 												alt="history-img">
 										</div>
 										<div class="lab-content">
@@ -132,7 +110,7 @@
 								<div class="lab-item">
 									<div class="lab-inner">
 										<div class="lab-thumb">
-											<img src="{% static 'assets/images/about/history/01.jpg' %}"
+											<img src="{% static 'assets/images/about/history/1.jpg' %}"
 												alt="history-img">
 										</div>
 										<div class="lab-content">
@@ -194,7 +172,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-xl-6 col-lg-3 col-md-3 col-6">
+								<!-- <div class="col-xl-6 col-lg-3 col-md-3 col-6">
 									<div class="lab-item">
 										<div class="lab-inner text-center">
 											<div class="lab-thumb mb-3">
@@ -207,7 +185,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 								<div class="col-xl-6 col-lg-3 col-md-3 col-6">
 									<div class="lab-item">
 										<div class="lab-inner text-center">
@@ -216,7 +194,7 @@
 													alt="Customer">
 											</div>
 											<div class="lab-content">
-												<h3><span class="counter">50</span>+</h3>
+												<h3><span class="counter">12</span>+</h3>
 												<h5>Volunteer</h5>
 											</div>
 										</div>
@@ -254,8 +232,8 @@
 </section>
 <!--History section end here -->
 
-<!-- testimonial Section start here -->
-<section class="testimonial-section padding-tb pt-0">
+<!-- testimonial Section start here 
+<section class="testimonial-section padding-tb  pt-0">
 	<div class="container">
 		<div class="row mb-15">
 			<div class="col-12">
@@ -268,9 +246,9 @@
 				<div class="testimonial-content">
 					<div class="row">
 						{% for n in memberData %}
-						<div class="col-lg-4">
+						<div class="col-lg-6 ">
 							<div class="lab-item testi-item-2">
-								<div class="lab-inner">
+								<div class="lab-inner bg-ash" style="margin:10px 0px">
 									<div class="testi-top">
 										<div class="testi-t-thumb">
 											<img src="{{n.member_image}}"
@@ -281,13 +259,13 @@
 												<h6>{{n.member_name}}</h6>
 											</a>
 											<p>{{n.member_designation}}</p>
-											<div class="rating">
+											 <div class="rating">
 												<span><a href="#"><i class="far fa-star"></i></a></span>
 												<span><a href="#"><i class="far fa-star"></i></a></span>
 												<span><a href="#"><i class="far fa-star"></i></a></span>
 												<span><a href="#"><i class="far fa-star"></i></a></span>
 												<span><a href="#"><i class="far fa-star"></i></a></span>
-											</div>
+											</div> 
 										</div>
 									</div>
 									<div class="testi-bottom">
@@ -308,6 +286,6 @@
 		</div>
 	</div>
 </section>
-<!-- testimonial Section end here -->
+ testimonial Section end here -->
 
 {% endblock %}
